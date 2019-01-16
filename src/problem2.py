@@ -268,7 +268,7 @@ class Triangle(object):
           :rtype: Triangle:
         """
         # -------------------------------------------------------------------------
-        # TODO: 9
+        # Done: 9
         #   a. READ the above specification, including the Example.
         #        ** ASK QUESTIONS AS NEEDED. **
         #        ** Be sure you understand it, ESPECIALLY the Example.
@@ -500,6 +500,27 @@ def run_test_return_doubled_triangle():
     expected_a = Point(60, 150)
     expected_b = Point(30, 90)
     expected_c = Point(60, 180)
+    run_test_instance_variables(t2, expected_a, expected_b, expected_c)
+
+    print()
+    print('-----------------------------------------------------------')
+    print(
+        'Testing the   return_doubled_triangle   method of the Triangle class.')
+    print('-----------------------------------------------------------')
+
+    print()
+    print("You must write your OWN test for this method.")
+    print("You will NOT be graded on the quality of your test(s).")
+
+    p1 = Point(35, 80)
+    p2 = Point(20, 50)
+    p3 = Point(35, 95)
+    t1 = Triangle(p1, p2, p3)
+    t2 = t1.return_doubled_triangle()
+
+    expected_a = Point(70, 160)
+    expected_b = Point(40, 100)
+    expected_c = Point(70, 190)
     run_test_instance_variables(t2, expected_a, expected_b, expected_c)
 
 
