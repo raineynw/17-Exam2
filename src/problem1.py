@@ -3,8 +3,8 @@ Exam 2, problem 1.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Nelson Rainey.
+"""  # DOne: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import testing_helper
 import time
@@ -12,14 +12,14 @@ import time
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    # run_test_problem1a()
-    # run_test_problem1b()
-    # run_test_problem1c()
-    # run_test_problem1d()
+    run_test_problem1a()
+    run_test_problem1b()
+    run_test_problem1c()
+    run_test_problem1d()
 
 
 ###############################################################################
-# TODO: 2.  READ the doc-strings for the  sum_of_digits  and  is_prime
+# DOne: 2.  READ the doc-strings for the  sum_of_digits  and  is_prime
 # functions defined below.  They are the same as you have seen before.
 # After you UNDERSTAND the doc-string (JUST the doc-string, NOT the code),
 # ASKING QUESTIONS AS NEEDED, change the above _TODO_ to DONE.
@@ -145,9 +145,13 @@ def problem1a(sequence):
       -- problem1a( (30, 1, 22, 8, 5) )  returns 35.
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # Done: 3. Implement and test this function.
     #          Tests have been written for you (above).
-    # -------------------------------------------------------------------------
+    # ------------------------------------------------------------------------
+    a = sequence[0]
+    l = len(sequence)
+    b = sequence[l-1]
+    return (a+b)
 
 
 def run_test_problem1b():
@@ -293,10 +297,16 @@ def problem1b(strings):
            FOR HELP if this problem's specification is not clear to you.
      """
     ###########################################################################
-    # TODO: 4. Implement and test this function.
+    # Done: 4. Implement and test this function.
     #          Tests have been written for you (above).
-    ###########################################################################
-
+    ###########################################################################\
+    plan = []
+    numbs = 0
+    for k in range (len(strings)):
+        if is_prime(len(strings[k])) == True:
+            numbs = strings[k]
+            plan = plan + [numbs]
+    return plan
 
 def run_test_problem1c():
     """ Tests the   problem1c   function. """
@@ -389,9 +399,13 @@ def problem1c(integers):
            their respective indices (0, 1, and 2, respectively).
      """
     ###########################################################################
-    # TODO: 4. Implement and test this function.
+    # Done: 4. Implement and test this function.
     #          Tests have been written for you (above).
     ###########################################################################
+    for k in range (len(integers)):
+        if integers[k]< k:
+            return integers[k]
+    return 999
 
 
 def run_test_problem1d():
@@ -523,9 +537,15 @@ def problem1d(t, sequence):
            FOR HELP if this problem's specification is not clear to you.
      """
     ###########################################################################
-    # TODO: 4. Implement and test this function.
+    # Done: 4. Implement and test this function.
     #          Tests have been written for you (above).
     ###########################################################################
+    a = int(len(sequence)/2)
+    b = 1
+    for k in range(a, len(sequence)):
+        if sum_of_digits(sequence[k]) > t:
+            b = b * sequence[k]
+    return b
 
 
 ###############################################################################
